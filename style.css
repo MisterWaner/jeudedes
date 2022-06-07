@@ -1,4 +1,143 @@
 html, body {
   font-family: 'Lato', sans-serif;
+  background-color: #fa7e05;
 }
 
+.sectionOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+h1 {
+  text-align: center;
+  color: #0581fa;
+  padding: 10px;
+}
+
+.buttons {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 640px) {
+  .sectionOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    margin-top: 20%;      
+  }
+  
+  
+  h1 {
+    text-align: center;
+    color: #5afc09;
+    padding: 10px;
+  }
+  
+  .buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+  .sectionOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    margin-top: 20%;      
+  }
+  
+  
+  h1 {
+    text-align: center;
+    color: #5afc09;
+    padding: 10px;
+  }
+  
+  .buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sectionOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+       
+  }
+  
+  
+  h1 {
+    text-align: center;
+    color: #5afc09;
+    padding: 10px;
+  }
+  
+  .buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (min-width: 1025) {
+  .sectionOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+       
+  }
+  
+  
+  h1 {
+    text-align: center;
+    color: #5afc09;
+    padding: 10px;
+  }
+  
+  .buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .button {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+  }
+}
