@@ -1,19 +1,40 @@
 html, body {
   font-family: 'Lato', sans-serif;
-  background-color: #fa7e05;
+  background-image: url(./images/imgDés.jpg);
+  background-size: auto auto;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
 }
 
 .sectionOne {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 15%;
+  margin-top: auto;
+
+  animation-name: glissage;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+
+}
+
+/*Small start animation*/
+@keyframes glissage {
+  from{right: 100%;}
+  25%{right: 75%;}
+  50%{right: 50%;}
+  75%{right: 25%;}
+  100%{right: 0%}
+
 }
 
 h1 {
   text-align: center;
-  color: #0581fa;
+  color: #5afc09;
   padding: 10px;
 }
 
@@ -28,14 +49,24 @@ h1 {
   text-align: center;
   padding: 10px;
   margin: 5px;
+  font-weight: bold;
+  border: 2px solid #5afc09;
 }
 
+
+/*Mobile screen*/
 @media only screen and (max-width: 640px) {
+  body {
+    background-size: auto auto;
+    background-image: url(./images/imgDés.jpg);
+    
+  }
+
   .sectionOne {
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
-    margin-top: 20%;      
+    margin-top: auto;     
   }
   
   
@@ -43,6 +74,7 @@ h1 {
     text-align: center;
     color: #5afc09;
     padding: 10px;
+    
   }
   
   .buttons {
@@ -56,14 +88,29 @@ h1 {
     padding: 10px;
     margin: 5px;
   }
+  .button4 {
+    background-color: white;
+  }
+  .button5 {
+    background-color: white;
+  }
+
+  .button4:hover {
+    background-color: #00fffb;
+  }
+  
+  .button5:hover {
+    background-color: #00fffb;
+  }
 }
 
+/*tablette screen*/
 @media only screen and (min-width: 641px) and (max-width: 768px) {
   .sectionOne {
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
-    margin-top: 20%;      
+    margin-top: auto;      
   }
   
   
@@ -84,14 +131,30 @@ h1 {
     padding: 10px;
     margin: 5px;
   }
+
+  .button4 {
+    background-color: white;
+  }
+  .button5 {
+    background-color: white;
+  }
+
+  .button4:hover {
+    background-color: #00fffb;
+  }
+  
+  .button5:hover {
+    background-color: #00fffb;
+  }
 }
 
+/*portable screen*/
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .sectionOne {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;    
-       
+    justify-content: space-between;   
+    margin-top: auto;
   }
   
   
@@ -112,14 +175,30 @@ h1 {
     padding: 10px;
     margin: 5px;
   }
+
+  .button4 {
+    background-color: white;
+  }
+  .button5 {
+    background-color: white;
+  }
+
+  .button4:hover {
+    background-color: #00fffb;
+  }
+  
+  .button5:hover {
+    background-color: #00fffb;
+  }
 }
 
+/*biggest screen*/
 @media only screen and (min-width: 1025) {
   .sectionOne {
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
-       
+    margin-top: auto;
   }
   
   
