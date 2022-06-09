@@ -16,7 +16,7 @@
     <h1>SHALL WE PLAY A GAME ?</h1>
     <div class="buttons">
       <button id="btn1" class="button button1 btn">YES</button>
-      <button id="btn2" class="button button2 btn">NO</button>
+      <button id="btn2" onmouseout="mouseOutbtn2()" class="button button2 btn">NO</button>
       <button id="btn3" class="button button3 btn">Maybe</button>
       <button id="btn4" class="button button4 btn">I don't know...</button>
       <button id="btn5" class="button button5 btn">can you repeat the question ?</button>
@@ -24,6 +24,20 @@
     </div> 
   </section>
   
+  <section class="sectionTwo" style="display:none">
+    <form class="form">
+      <div id="div1">
+        <label for="playerOne">Joueur 1 : </label>
+        <input id="P1" type="text" name="playerOne" placeholder="Entre ton gamer tag" value="" required>
+        <button id="btnP1" class="btn">Prêt!</button>
+      </div>
+      <div id="div2">
+        <label for="playerTwo">Joueur 2 :</label>
+        <input id="P2" type="text" name="playerTwo" placeholder="Entre ton gamer tag" value="" required>
+        <button id="btnP2" class="btn"><a href="./game.html">Prêt!</a></button>
+      </div>   
+    </form>
+  </section>
 
   
   
