@@ -1,3 +1,5 @@
+const html = document.querySelector('html')
+const body = document.querySelectorAll('body')
 const btn5 = document.querySelector('#btn5');
 const malcomAudio = document.querySelector('#malcomAudio');
 const btn1 = document.querySelector('#btn1');
@@ -6,7 +8,7 @@ const btn3 = document.querySelector('#btn3');
 const btn4 = document.querySelector('#btn4');
 
 const sectionOne = document.querySelector('.sectionOne')
-const sectionTwo = document.querySelector('.sectionTwo')
+const sectionGame = document.querySelector('.sectionGame')
 
 //Launch a music when the last button is clicked
 btn1.addEventListener('click', () => {
@@ -47,12 +49,20 @@ function mouseOutbtn2() {
 function btn1Clicked() {
   if (btn1.clicked = true) {
     sectionOne.style.display = 'none';
-    sectionTwo.style.display = 'block';
+    sectionGame.style.display = 'block';
+    html.style.background = 'greenyellow';
   } 
 }
 
-const btnP1 = document.querySelector('#btnP1');
-const btnP2 = document.querySelector('#btnP2');
+
+
+//Game Interface
+
+const p1Gamer = document.querySelector('#p1Title');
+const p2Gamer = document.querySelector('#p2Title');
+
+
+
 
 
 

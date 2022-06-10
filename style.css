@@ -22,6 +22,7 @@ html, body {
 
 }
 
+
 /*Small start animation*/
 @keyframes glissage {
   from{right: 100%;}
@@ -72,12 +73,49 @@ h1 {
   margin: 5px;
 }
 
+.buttonP1, .buttonP2 {
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  border: 2px solid #5afc09;
+  color: black;
+}
+
+.buttonP2 > a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+.buttonP2 > a:hover {
+  color: #5afc09;
+}
+
+/*Interface Game*/
+.sectionGame {
+  background-color: greenyellow;
+  width: 100vw;
+  height: 100vh;
+}
+
+.playingGround {
+  border: black 2px solid;
+  width: 95%;
+  height: 95%;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+  
+
 /*Mobile screen*/
 @media only screen and (max-width: 640px) {
   body {
     background-size: auto auto;
-    background-image: url(./images/imgDés.jpg);
-    
   }
 
   .sectionOne {
@@ -121,22 +159,34 @@ h1 {
     background-color: #00fffb;
   }
   /* Inscription interface*/
-  .sectionTwo {
-    display: block;
-    text-align: center;
-    margin-top: auto;
-    
-  }
   
-  .form {
+  .playingGround {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    color: #5afc09;
+    align-items: center;
+  
+  }
+  #newGame {
+    margin-top: 3px;
+    margin-right: 10px;
+  }
+  #newGameP {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-decoration: underline;
   }
   
-  #div1, #div2 {
-    margin: 5px;
+  .sectionP1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sectionP2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -185,10 +235,10 @@ h1 {
 
   /* Inscription interface*/
   .sectionTwo {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     margin-top: auto;
-    
+    justify-content: space-between;
   }
   
   .form {
@@ -200,6 +250,27 @@ h1 {
   
   #div1, #div2 {
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .buttonP1, .buttonP2 {
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    border: 2px solid #5afc09;
+    color: black;
+    
+  }
+
+  .buttonP2 > a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .buttonP2 > a:hover {
+    color: #5afc09;
   }
 }
 
@@ -262,6 +333,27 @@ h1 {
   
   #div1, #div2 {
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .buttonP1, .buttonP2 {
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    border: 2px solid #5afc09;
+    color: black;
+    
+  }
+
+  .buttonP2 > a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .buttonP2 > a:hover {
+    color: #5afc09;
   }
 }
 
@@ -307,8 +399,27 @@ h1 {
     justify-content: center;
     color: #5afc09;
   }
-  
+
   #div1, #div2 {
     margin: 5px;
+    
+  }
+
+  .buttonP1, .buttonP2 {
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    border: 2px solid #5afc09;
+    color: black;
+    
+  }
+
+  .buttonP2 > a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .buttonP2 > a:hover {
+    color: #5afc09;
   }
 }
