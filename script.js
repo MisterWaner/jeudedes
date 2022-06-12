@@ -45,21 +45,35 @@ function mouseOutbtn2() {
   btn2.style.background = "none";
 }
 
-//Inscription Interface
+//Game Interface
 function btn1Clicked() {
   if (btn1.clicked = true) {
     sectionOne.style.display = 'none';
     sectionGame.style.display = 'block';
-    html.style.background = 'greenyellow';
+    html.style.backgroundImage = 'none';
   } 
+}
+
+const newGame = document.querySelector('#newGame');
+const gamerOne = "Joueur 1"
+const gamerTwo = "Joueur 2"
+
+function newPlay() {
+  gamerOne = prompt("Joueur 1, entrez votre pseudo");
+  gamerTwo = prompt("Joueur 2, entrez votre pseudo");
+
+  document.querySelector("p.gamerOne").innerHTML = gamerOne;
+  document.querySelector("p.gamerTwo").innerHTML = gamerTwo;
 }
 
 
 
-//Game Interface
 
-const p1Gamer = document.querySelector('#p1Title');
-const p2Gamer = document.querySelector('#p2Title');
+
+
+
+
+
 
 
 

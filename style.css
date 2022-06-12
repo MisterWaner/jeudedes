@@ -5,6 +5,8 @@ html, body {
   width: 100vw;
   height: 100vh;
   background-position: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .sectionOne {
@@ -54,62 +56,137 @@ h1 {
   border: 2px solid #5afc09;
 }
 
-/* Inscription interface*/
-.sectionTwo {
-  display: block;
-  text-align: center;
-  margin-top: auto;
-  
-}
-
-.form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: #5afc09;
-}
-
-#div1, #div2 {
-  margin: 5px;
-}
-
-.buttonP1, .buttonP2 {
-  padding: 10px;
-  margin: 5px;
-  font-weight: bold;
-  border: 2px solid #5afc09;
-  color: black;
-}
-
-.buttonP2 > a {
-  text-decoration: none;
-  color: black;
-  
-}
-
-.buttonP2 > a:hover {
-  color: #5afc09;
-}
-
 /*Interface Game*/
 .sectionGame {
   background-color: greenyellow;
+  background-position:center;
   width: 100vw;
   height: 100vh;
+  display: block;
 }
 
-.playingGround {
-  border: black 2px solid;
-  width: 95%;
-  height: 95%;
-  margin: auto;
-}
 
 .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
+#newGameButton {
+  display: flex;
+  flex-direction: row;
+  background: none;
+  border: none
+}
+
+#newGame {
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+#newGameP {
+  padding-top: 5px;
+  padding-left: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sectionP1 > p {
+  text-decoration: underline;
+}
+
+.sectionP1 {
+  display: block;
+  position: relative;
+  float: left;
+  padding-left: 15px;
+}
+
+.sectionP2 > p {
+  text-decoration: underline;
+}
+
+.sectionP2 {
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 15px;
+}
+
+#gamerOne {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#gamerTwo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rollButtonDiv {
+  display: block;
+  position: relative;
+  float: left;
+  top: 480px;
+}
+
+#rollButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  background: none;
+  border: none
+}
+
+#roll {
+  margin-top: 3px;
+  
+}
+
+#rollP {
+  padding-top: 10px;
+  padding-left: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.holdscoreButtonDiv {
+  display: block;
+  position: relative;
+  float: right;
+  top: 480px;
+}
+
+#holdscoreButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  background: none;
+  border: none
+}
+
+#holdscore {
+  margin-top: 3px;
+  
+}
+
+#holdscoreP {
+  padding-top: 10px;
+  padding-left: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
   
 
 /*Mobile screen*/
@@ -130,7 +207,6 @@ h1 {
     text-align: center;
     color: #5afc09;
     padding: 10px;
-    
   }
   
   .buttons {
@@ -159,14 +235,23 @@ h1 {
     background-color: #00fffb;
   }
   /* Inscription interface*/
-  
-  .playingGround {
+
+  .sectionGame {
+    background-color: greenyellow;
+    background-position:center;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    
+  }  
+
+  #newGameButton {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
+    flex-direction: row;
+    background: none;
+    border: none
   }
+  
   #newGame {
     margin-top: 3px;
     margin-right: 10px;
@@ -181,12 +266,76 @@ h1 {
   .sectionP1 {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    padding-left: 15px;
   }
+
+  
   
   .sectionP2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    padding-right: 15px;
+  }
+
+  .div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .rollButtonDiv {
+    display: block;
+    position: relative;
+    float: left;
+    top: 480px;
+    padding-left: 15px;
+  }
+
+  #rollButton {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background: none;
+  }
+
+  #roll {
+    margin-top: 3px;
+  }
+  
+  #rollP {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .holdscoreButtonDiv {
+    display: block;
+    position: relative;
+    float: right;
+    top: 480px;
+    padding-right: 15px;
+  }
+
+  #holdscoreButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: none;
+    border: none;
+  }
+  
+  #holdscore {
+    margin-top: 3px;
+  }
+  
+  #holdscoreP {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
@@ -234,43 +383,104 @@ h1 {
   }
 
   /* Inscription interface*/
-  .sectionTwo {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    justify-content: space-between;
-  }
   
-  .form {
+  .sectionGame {
+    background-color: greenyellow;
+    background-position:center;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }  
+
+  #newGameButton {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    color: #5afc09;
+    background: none;
+    border: none
   }
   
-  #div1, #div2 {
-    margin: 5px;
+  #newGame {
+    margin-top: 3px;
+    margin-right: 10px;
+  }
+
+  #newGameP {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .sectionP1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+  }
+  
+  .sectionP2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 15px;
   }
 
-  .buttonP1, .buttonP2 {
-    padding: 10px;
-    margin: 5px;
-    font-weight: bold;
-    border: 2px solid #5afc09;
-    color: black;
+  .div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .rollButtonDiv {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    float: left;
+    top: 480px;
+  }
+
+  #rollButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  #roll {
+    margin-top: 3px;
     
   }
-
-  .buttonP2 > a {
-    text-decoration: none;
-    color: black;
+  
+  #rollP {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
   }
 
-  .buttonP2 > a:hover {
-    color: #5afc09;
+  .holdscoreButtonDiv {
+    display: block;
+    position: relative;
+    padding-right: 15px;
+    float: right;
+    top: 480px;
+  }
+
+  #holdscoreButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+  
+  #holdscore {
+    margin-top: 3px;
+    
+  }
+  
+  #holdscoreP {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
@@ -318,42 +528,110 @@ h1 {
   }
 
   /* Inscription interface*/
-  .sectionTwo {
-    display: block;
-    text-align: center;
-    margin-top: auto;
-  }
   
-  .form {
+  .sectionGame {
+    background-color: greenyellow;
+    background-position:center;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }  
+
+  #newGameButton {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    color: #5afc09;
+    background: none;
+    border: none
   }
   
-  #div1, #div2 {
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  #newGame {
+    margin-top: 3px;
+    margin-right: 10px;
   }
 
-  .buttonP1, .buttonP2 {
-    padding: 10px;
-    margin: 5px;
+  #newGameP {
+    padding-top: 5px;
+    padding-left: 10px;
     font-weight: bold;
-    border: 2px solid #5afc09;
-    color: black;
+    text-decoration: underline;
+  }
+  
+  .sectionP1 {
+    display: block;
+    position: relative;
+    float: left;
+  }
+  
+  .sectionP2 {
+    display: block;
+    position: relative;
+    float: right;
+  }
+
+  #p1Gamer {
+    text-align: center;
+  }
+
+  #p2Gamer {
+    text-align: center;
+  }
+
+  .div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .rollButtonDiv {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    float: left;
+    top: 480px;
+  }
+
+  #rollButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  #roll {
+    margin-top: 3px;
+  }
+  
+  #rollP {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .holdscoreButtonDiv {
+    display: block;
+    position: relative;
+    padding-right: 15px;
+    float: right;
+    top: 480px;
+  }
+
+  #holdscoreButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+  
+  #holdscore {
+    margin-top: 3px;
     
   }
-
-  .buttonP2 > a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .buttonP2 > a:hover {
-    color: #5afc09;
+  
+  #holdscoreP {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
@@ -386,40 +664,110 @@ h1 {
   }
 
   /* Inscription interface*/
-  .sectionTwo {
+  
+  .sectionGame {
+    background-color: greenyellow;
+    background-position:center;
+    width: 100vw;
+    height: 100vh;
     display: block;
+  }  
+
+  #newGameButton {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border: none
+  }
+
+  #newGame {
+    margin-top: 3px;
+    margin-right: 10px;
+  }
+
+  #newGameP {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .sectionP1 {
+    display: block;
+    position: relative;
+    float: left;
+  }
+  
+  .sectionP2 {
+    display: block;
+    position: relative;
+    float: right;
+  }
+
+  #p1Gamer {
     text-align: center;
-    margin-top: auto;
+  }
+
+  #p2Gamer {
+    text-align: center;
+  }
+
+  .div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .rollButtonDiv {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    float: left;
+    top: 480px;
+  }
+
+  #rollButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  #roll {
+    margin-top: 3px;
     
   }
   
-  .form {
+  #rollP {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .holdscoreButtonDiv {
+    display: block;
+    position: relative;
+    padding-right: 15px;
+    float: right;
+    top: 480px;
+  }
+
+  #holdscoreButton {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    color: #5afc09;
+    justify-content: right;
   }
-
-  #div1, #div2 {
-    margin: 5px;
+  
+  #holdscore {
+    margin-top: 3px;
     
   }
-
-  .buttonP1, .buttonP2 {
-    padding: 10px;
-    margin: 5px;
+  
+  #holdscoreP {
+    padding-top: 10px;
+    padding-left: 5px;
     font-weight: bold;
-    border: 2px solid #5afc09;
-    color: black;
-    
-  }
-
-  .buttonP2 > a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .buttonP2 > a:hover {
-    color: #5afc09;
+    text-decoration: underline;
   }
 }

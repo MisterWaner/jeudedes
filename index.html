@@ -26,18 +26,44 @@
 
   <section class="sectionGame" style="display:none">
     <div class="header">
-      <img id="newGame" src="./images/new-game.png" width="32px" height="32px">
-      <p id="newGameP">Nouvelle partie</p>
+      <button id="newGameButton" onclick="newPlay()">
+        <img id="newGame" alt="circle-plus" src="./images/new-game.png" width="32px" height="32px">
+        <p id="newGameP">Nouvelle partie</p>
+      </button>
     </div>
-    <div class="playingGround">
-      <section class="sectionP1">
-        <h3 id="p1Gamer">Joueur 1</h3>
-      </section>
+    
+    <div class="sectionP1">
+      <p id="gamerOne">Joueur 1</p>
+    </div>
   
-      <section class="sectionP2">
-        <h3 id="p2Gamer">Joueur 2</h3>
-      </section>
+    <div class="diceSection">
+      <img id="face1" src="./images/face1.png" alt="first face of a dice" width="64px" height="64px" style="display:none">
+      <img id="face2" src="./images/face2.png" alt="second face of a dice" width="64px" height="64px" style="display:none">
+      <img id="face3" src="./images/face3.png" alt="third face of a dice" width="64px" height="64px" style="display:none">
+      <img id="face4" src="./images/face4.png" alt="fourth face of a dice" width="64px" height="64px" style="display:none">
+      <img id="face5" src="./images/face5.png" alt="fifth face of a dice" width="64px" height="64px" style="display:none">
+      <img id="face6" src="./images/face6.png" alt="sixth face of a dice" width="64px" height="64px" style="display:none">
     </div>
+        
+    <div class="sectionP2">
+      <p id="gamerTwo">Joueur 2</p>
+    </div>
+    <div class="div">
+      <div class="rollButtonDiv">
+      <button id="rollButton">
+        <img id="roll" src="./images/rotate.png" alt="two arrows rotate" width="32px" height="32px">
+        <p id="rollP">Lancez le dé</p>
+      </button>
+    </div>
+    <div class="holdscoreButtonDiv">
+      <button id="holdscoreButton">
+        <img id="holdscore" src="./images/hold-score.png" alt="arrow falling in a box" width="32px" height="32px">
+        <p id="holdscoreP">Enregistrez le score</p>
+      </button>
+    </div>
+    </div>
+    
+    
   </section>
 
   
