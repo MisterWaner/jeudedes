@@ -15,14 +15,16 @@
   <section class="sectionOne">
     <h1>SHALL WE PLAY A GAME ?</h1>
     <div class="buttons">
-      <button id="btn1" class="button button1 btn">YES</button>
+      <button id="btn1" class=" button button1 btn">YES</button>
       <button id="btn2" onmouseout="mouseOutbtn2()" class="button button2 btn">NO</button>
       <button id="btn3" class="button button3 btn">Maybe</button>
       <button id="btn4" class="button button4 btn">I don't know...</button>
       <button id="btn5" class="button button5 btn">can you repeat the question ?</button>
       <audio id="malcomAudio" src="./sons/generique_malcom.mp3"></audio>
-    </div> 
+    </div>
   </section>
+  
+  
 
   <!--Playground dice game-->
   <section class="sectionGame" style="display:none">
@@ -37,22 +39,62 @@
     </div>
     
     <div class="sectionP1">
-      <p class="gamerOne">Joueur 1</p>
-    </div>
-    <div class="sectionP2">
-      <p class="gamerTwo">Joueur 2</p>
+      <div class="player">
+        <svg id="puce1" style="color:transparent" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="currentPlayer bi bi-caret-right-fill" viewbox="0 0 16 16">
+          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+        </svg>
+        <p class="gamerOne">
+          Joueur 1
+        </p>
+      </div>
+      <div id="score1" class="globalScore">0</div>
+      <div id="diceP1" class="dice">
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-dice-1" viewbox="0 0 16 16">
+          <circle cx="8" cy="8" r="1.5"/>
+          <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/>
+          </svg>
+      </div>
+
+      <div class="currentScore">
+        <p class="p1">Score Courant</p>
+        <p class="p2">0</p>
+      </div>
     </div>
     
-    <div class="div">
-      <div class="rollButtonDiv">
-      <button id="rollButton">
-        <svg id="roll" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-repeat" viewbox="0 0 16 16">
-          <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-          <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+    <div class="sectionP2">
+      <div class="player">
+        <svg id="puce2" style="color:transparent" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="currentPlayer bi bi-caret-right-fill" viewbox="0 0 16 16">
+          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
         </svg>
-        <p id="rollP">Lancez le dé</p>
-      </button>
+        <p class="gamerTwo">
+          Joueur 2
+        </p>
+      </div>
+      <div id="score2" class="globalScore">0</div>
+      <div id="diceP2" class="dice">
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-dice-1" viewbox="0 0 16 16">
+          <circle cx="8" cy="8" r="1.5"/>
+          <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/>
+          </svg>
+      </div>
+      <div class="currentScore">
+        <p class="p1">Score Courant</p>
+        <p class="p2">0</p>
+      </div>
     </div>
+
+    
+
+    <div class="foot">
+      <div class="rollButtonDiv">
+        <button id="rollBtn">
+          <svg id="roll" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-repeat" viewbox="0 0 16 16">
+            <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+            <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+          </svg>
+          <p id="rollP">Lancez le dé</p>
+        </button>
+      </div>
     <div class="holdscoreButtonDiv">
       <button id="holdscoreButton">
         <svg id="holdscore" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-arrow-in-down" viewbox="0 0 16 16">
