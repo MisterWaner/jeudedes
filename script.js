@@ -197,7 +197,7 @@ const saveScore = () => {
       canPlay2.style.display = 'none';
       dice.innerHTML = dices[0];
     } else if (joueur2.globalScore > 100) {
-      alert(player2 + ' a gagné avec ! ');
+      alert(player2 + ' a gagné ! ');
       winnerSound.play();
     }
   }
