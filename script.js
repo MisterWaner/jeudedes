@@ -82,8 +82,7 @@ const canPlay1 = document.querySelector('.puce1');
 const canPlay2 = document.querySelector('.puce2');
 
 function editNames() {
-  player1 = prompt(player1 + " Choisissez un pseudo");
-  player2 = prompt(player2 + " Choisissez un pseudo");
+  
 
   document.querySelector('p.gamerOne').innerHTML = player1;
   document.querySelector('p.gamerTwo').innerHTML = player2;
@@ -209,10 +208,10 @@ const saveScore = () => {
 const newGame = () => {
   
   //reinitiate the game in program
-  player1.roundScore = 0;
-  player1.globalScore = 0;
-  player2.roundScore = 0;
-  player2.globalScore = 0;
+  joueur1.roundScore = 0;
+  joueur1.globalScore = 0;
+  joueur2.roundScore = 0;
+  joueur2.globalScore = 0;
 
   //reinitiate in DOM
   globalScore1.textContent = "0";
@@ -222,15 +221,13 @@ const newGame = () => {
   dice.innerHTML = dices[0];
   canPlay1.style.display = 'block';
   canPlay2.style.display = 'none';
+  player1 = prompt(player1 + " Choisissez un pseudo");
+  player2 = prompt(player2 + " Choisissez un pseudo");
   document.querySelector('p.gamerOne').innerHTML = player1;
   document.querySelector('p.gamerTwo').innerHTML = player2;
-
 }
 
-newGameBtn.addEventListener('click', () => {
-  editNames();
-  newGame();
-});
+newGameBtn.addEventListener('click', newGame);
 rollDice.addEventListener('click', startPlaying);
 holdScoreBtn.addEventListener('click', saveScore);
 
